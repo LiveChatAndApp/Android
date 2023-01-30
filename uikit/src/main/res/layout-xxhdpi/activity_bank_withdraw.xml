@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundGray"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/contentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@color/white"
+        android:paddingTop="10dp"
+        android:paddingBottom="20dp"
+        app:layout_constraintTop_toBottomOf="@id/appbar">
+
+        <View
+            android:id="@+id/guideLine"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--提现金额-->
+        <TextView
+            android:id="@+id/withdrawAmountLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/withdraw_money"
+            android:textColor="@color/textBlack"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="@id/guideLine"
+            app:layout_constraintTop_toBottomOf="@id/guideLine" />
+
+        <EditText
+            android:id="@+id/withdrawAmountEditView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="@string/please_enter_withdraw_money"
+            android:inputType="number"
+            android:textColor="@color/textBlack"
+            android:textColorHint="@color/gray25"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@id/guideLine"
+            app:layout_constraintStart_toStartOf="@id/guideLine"
+            app:layout_constraintTop_toBottomOf="@id/withdrawAmountLabel" />
+
+        <!--余额-->
+        <TextView
+            android:id="@+id/balanceTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/balance_text"
+            android:textColor="@color/black1"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@id/guideLine"
+            app:layout_constraintTop_toBottomOf="@id/guideLine" />
+
+        <!--可提现额度-->
+        <TextView
+            android:id="@+id/canWithdrawBalance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/could_withdraw_money"
+            android:textColor="@color/black1"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@id/guideLine"
+            app:layout_constraintTop_toBottomOf="@id/balanceTextView" />
+
+        <!--收款银行-->
+        <TextView
+            android:id="@+id/selectBankLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/select_bank"
+            android:textColor="@color/black1"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@id/guideLine"
+            app:layout_constraintTop_toBottomOf="@id/withdrawAmountEditView" />
+
+        <Spinner
+            android:id="@+id/selectBankSpinner"
+            style="@style/common_spinner2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textSize="14sp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="@id/guideLine"
+            app:layout_constraintStart_toStartOf="@id/guideLine"
+            app:layout_constraintTop_toBottomOf="@id/selectBankLabel" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/bankInfoGroup"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="bankAccountNumberLabel,bankAccountNumberTextView,bankNameLabel,bankNameTextView,bankOwnerNameLabel,bankOwnerNameTextView" />
+
+        <!--银行帐号-->
+        <TextView
+            android:id="@+id/bankAccountNumberLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="12dp"
+            android:text="@string/bank_account"
+            android:textColor="@color/gray23"
+            android:textSize="13sp"
+            app:layout_constraintStart_toStartOf="@id/guideLine"
+            app:layout_constraintTop_toBottomOf="@id/selectBankSpinner" />
+
+        <TextView
+            android:id="@+id/bankAccountNumberTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/textBlack"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="@id/guideLine"
+            app:layout_constraintStart_toStartOf="@id/bankAccountNumberLabel"
+            app:layout_constraintTop_toBottomOf="@id/bankAccountNumberLabel"
+            tools:text="@string/bank_account" />
+
+        <!--银行名称-->
+        <TextView
+            android:id="@+id/bankNameLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:text="@string/bank_name"
+            android:textColor="@color/gray23"
+            android:textSize="13sp"
+            app:layout_constraintStart_toStartOf="@id/bankAccountNumberLabel"
+            app:layout_constraintTop_toBottomOf="@id/bankAccountNumberTextView" />
+
+        <TextView
+            android:id="@+id/bankNameTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/textBlack"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="@id/guideLine"
+            app:layout_constraintStart_toStartOf="@id/bankAccountNumberTextView"
+            app:layout_constraintTop_toBottomOf="@id/bankNameLabel"
+            tools:text="@string/bank_name" />
+
+        <!--收款人姓名-->
+        <TextView
+            android:id="@+id/bankOwnerNameLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:text="@string/bank_owner_name"
+            android:textColor="@color/gray23"
+            android:textSize="13sp"
+            app:layout_constraintStart_toStartOf="@id/bankAccountNumberLabel"
+            app:layout_constraintTop_toBottomOf="@id/bankNameTextView" />
+
+        <TextView
+            android:id="@+id/bankOwnerNameTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/textBlack"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="@id/guideLine"
+            app:layout_constraintStart_toStartOf="@id/bankAccountNumberTextView"
+            app:layout_constraintTop_toBottomOf="@id/bankOwnerNameLabel"
+            tools:text="@string/bank_owner_name" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tips"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="12dp"
+        android:text="@string/withdraw_tip"
+        android:textColor="@color/gray23"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toTopOf="@id/submitButton"
+        app:layout_constraintEnd_toEndOf="@id/contentLayout"
+        app:layout_constraintStart_toStartOf="@id/contentLayout" />
+
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/bg_blue_click"
+        android:enabled="true"
+        android:text="@string/submit"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/contentLayout"
+        app:layout_constraintStart_toStartOf="@id/contentLayout" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/no_data"
+        android:textSize="30sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

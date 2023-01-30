@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundGray"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+    <!--tab1-->
+    <View
+        android:id="@+id/tab1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/tab1_bottom"
+        app:layout_constraintEnd_toEndOf="@id/sendLabel"
+        app:layout_constraintStart_toStartOf="@id/sendLabel"
+        app:layout_constraintTop_toBottomOf="@id/appbar" />
+
+    <TextView
+        android:id="@+id/inviteTipLabel2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/postscript_tip"
+        android:textColor="@color/gray23"
+        android:textSize="14sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@id/sendLabel"
+        app:layout_constraintStart_toStartOf="@id/sendLabel"
+        app:layout_constraintTop_toTopOf="@id/tab1" />
+
+    <TextView
+        android:id="@+id/sendLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/send_invite_label"
+        android:textColor="@color/textBlack"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inviteTipLabel2" />
+
+    <EditText
+        android:id="@+id/introTextView"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+        android:background="@null"
+        android:drawableBottom="@drawable/selector_edit_focus"
+        android:gravity="center_vertical"
+        android:hint="@string/please_enter"
+        android:imeOptions="actionNext"
+        android:inputType="textShortMessage"
+        android:maxLines="1"
+        android:textColor="@color/textBlack"
+        android:textColorHint="@color/gray20"
+        android:textSize="14sp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@id/sendLabel"
+        app:layout_constraintStart_toStartOf="@id/sendLabel"
+        app:layout_constraintTop_toBottomOf="@id/sendLabel" />
+
+    <TextView
+        android:id="@+id/inviteTipLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/postscript_tip"
+        android:textColor="@color/gray23"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="@id/sendLabel"
+        app:layout_constraintStart_toStartOf="@id/sendLabel"
+        app:layout_constraintTop_toBottomOf="@id/introTextView" />
+
+    <View
+        android:id="@+id/tab1_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="@id/sendLabel"
+        app:layout_constraintStart_toStartOf="@id/sendLabel"
+        app:layout_constraintTop_toBottomOf="@id/inviteTipLabel" />
+
+    <!--tab2-->
+    <View
+        android:id="@+id/tab2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/space"
+        app:layout_constraintEnd_toEndOf="@id/sendLabel"
+        app:layout_constraintStart_toStartOf="@id/sendLabel"
+        app:layout_constraintTop_toBottomOf="@id/tab1" />
+
+    <TextView
+        android:id="@+id/verifyLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/friend_verify_label"
+        android:textColor="@color/textBlack"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@id/sendLabel"
+        app:layout_constraintStart_toStartOf="@id/sendLabel"
+        app:layout_constraintTop_toTopOf="@id/tab2" />
+
+    <RadioGroup
+        android:id="@+id/verifyRadioGroup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        app:layout_constraintEnd_toEndOf="@id/sendLabel"
+        app:layout_constraintStart_toStartOf="@id/sendLabel"
+        app:layout_constraintTop_toBottomOf="@id/verifyLabel">
+
+        <RadioButton
+            android:id="@+id/skipVerifyRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/blueBtn"
+            android:checked="true"
+            android:text="@string/skip_verify_text"
+            android:textColor="@color/textBlack" />
+
+        <RadioButton
+            android:id="@+id/shouldVerifyRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:buttonTint="@color/blueBtn"
+            android:text="@string/should_verify_text"
+            android:textColor="@color/textBlack" />
+
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/verifyEditText"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="18dp"
+        android:background="@null"
+        android:drawableBottom="@drawable/selector_edit_focus"
+        android:enabled="false"
+        android:gravity="center_vertical"
+        android:hint="@string/friend_verify_text"
+        android:imeOptions="actionDone"
+        android:inputType="textShortMessage"
+        android:textColor="@color/textBlack"
+        android:textColorHint="@color/gray20"
+        android:textSize="14sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@id/sendLabel"
+        app:layout_constraintStart_toStartOf="@id/sendLabel"
+        app:layout_constraintTop_toBottomOf="@id/verifyRadioGroup" />
+
+    <TextView
+        android:id="@+id/verifyTipLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/verify_tip"
+        android:textColor="@color/gray23"
+        android:textSize="13sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@id/sendLabel"
+        app:layout_constraintStart_toStartOf="@id/sendLabel"
+        app:layout_constraintTop_toBottomOf="@id/verifyEditText" />
+
+    <androidx.legacy.widget.Space
+        android:id="@+id/space"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/verifyTipLabel" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

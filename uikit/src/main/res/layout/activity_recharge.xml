@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundGray"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/contentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appbar">
+
+        <!--支付渠道-->
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/typeLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="15dp"
+            android:gravity="start"
+            android:text="@string/recharge_type"
+            android:textColor="@color/textBlack"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="@id/typeLabel"
+            app:layout_constraintStart_toStartOf="@id/typeLabel"
+            app:layout_constraintTop_toBottomOf="@id/typeLabel">
+
+            <RadioButton
+                android:id="@+id/bankRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/blueBtn"
+                android:checked="true"
+                android:text="@string/type_bank" />
+
+            <RadioButton
+                android:id="@+id/weChatRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/blueBtn"
+                android:text="@string/type_weChat" />
+
+            <RadioButton
+                android:id="@+id/aliRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/blueBtn"
+                android:text="@string/type_ali" />
+        </RadioGroup>
+
+        <!--充值金额-->
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/amountTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="start"
+            android:text="@string/recharge_amount"
+            android:textColor="@color/textBlack"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="@id/typeLabel"
+            app:layout_constraintStart_toStartOf="@id/typeLabel"
+            app:layout_constraintTop_toBottomOf="@id/radioGroup" />
+
+        <EditText
+            android:id="@+id/rechargeAmountEditView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="@string/please_enter_recharge_money"
+            android:inputType="number"
+            android:textColor="@color/textBlack"
+            android:textColorHint="@color/gray25"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@id/typeLabel"
+            app:layout_constraintStart_toStartOf="@id/typeLabel"
+            app:layout_constraintTop_toBottomOf="@id/amountTextView" />
+
+        <!--选择渠道-->
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/channelTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="start"
+            android:text="@string/select_channel_recharge"
+            android:textColor="@color/textBlack"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="@id/typeLabel"
+            app:layout_constraintStart_toStartOf="@id/typeLabel"
+            app:layout_constraintTop_toBottomOf="@id/rechargeAmountEditView" />
+
+        <Spinner
+            android:id="@+id/selectChannelSpinner"
+            style="@style/common_spinner2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textSize="16sp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="@id/typeLabel"
+            app:layout_constraintStart_toStartOf="@id/typeLabel"
+            app:layout_constraintTop_toBottomOf="@id/channelTextView"
+            tools:listitem="@layout/item_select_bank" />
+
+        <androidx.legacy.widget.Space
+            android:layout_width="1dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/selectChannelSpinner" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/bg_blue_click"
+        android:enabled="true"
+        android:text="@string/submit_order"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

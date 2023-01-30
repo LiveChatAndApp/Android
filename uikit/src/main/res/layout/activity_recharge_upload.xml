@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backgroundGray"
+        android:orientation="vertical">
+
+        <include layout="@layout/toolbar" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/contentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingBottom="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/appbar">
+
+            <!--支付渠道-->
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/typeLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="15dp"
+                android:gravity="start"
+                android:text="@string/pay_information_text"
+                android:textColor="@color/textBlack"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!--收款人姓名-->
+            <TextView
+                android:id="@+id/bankOwnerNameLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="13dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/bank_owner_name"
+                android:textColor="@color/gray26"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/typeLabel"
+                app:layout_constraintTop_toBottomOf="@id/typeLabel" />
+
+            <TextView
+                android:id="@+id/bankOwnerNameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:textColor="@color/textBlack"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/bankOwnerNameLabel"
+                tools:text="@string/bank_owner_name" />
+
+            <ImageView
+                android:id="@+id/copyRechargeNameImageView"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="4dp"
+                android:foreground="?attr/selectableItemBackground"
+                android:src="@drawable/baseline_content_copy_black_36"
+                app:layout_constraintBottom_toBottomOf="@id/bankOwnerNameTextView"
+                app:layout_constraintEnd_toStartOf="@id/bankOwnerNameTextView"
+                app:layout_constraintTop_toTopOf="@id/bankOwnerNameTextView" />
+
+            <!--银行名称-->
+            <TextView
+                android:id="@+id/bankNameLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/bank_name"
+                android:textColor="@color/gray26"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/bankOwnerNameLabel"
+                app:layout_constraintTop_toBottomOf="@id/bankOwnerNameLabel" />
+
+            <TextView
+                android:id="@+id/bankNameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textBlack"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@id/bankOwnerNameTextView"
+                app:layout_constraintTop_toTopOf="@id/bankNameLabel"
+                tools:text="@string/bank_name" />
+
+            <!--银行帐号-->
+            <TextView
+                android:id="@+id/bankAccountNumberLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/bank_account"
+                android:textColor="@color/gray26"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@id/bankNameLabel"
+                app:layout_constraintTop_toBottomOf="@id/bankNameLabel" />
+
+            <TextView
+                android:id="@+id/bankAccountNumberTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:textColor="@color/textBlack"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/bankAccountNumberLabel"
+                tools:text="@string/bank_account" />
+
+            <ImageView
+                android:id="@+id/copyRechargeAccountImageView"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:foreground="?attr/selectableItemBackground"
+                android:src="@drawable/baseline_content_copy_black_36"
+                app:layout_constraintEnd_toStartOf="@id/bankAccountNumberTextView"
+                app:layout_constraintTop_toTopOf="@id/bankAccountNumberTextView" />
+
+            <!--收款码-->
+            <TextView
+                android:id="@+id/rechargeQrCodeLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/recharge_account_qrCode"
+                android:textColor="@color/gray26"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/bankAccountNumberLabel"
+                app:layout_constraintTop_toBottomOf="@id/bankAccountNumberLabel" />
+
+            <ImageView
+                android:id="@+id/rechargeQrCodeImageView"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                app:layout_constraintHorizontal_bias="0.7"
+                app:layout_constraintEnd_toStartOf="@id/downloadQrCodeTextView"
+                app:layout_constraintStart_toEndOf="@id/rechargeQrCodeLabel"
+                app:layout_constraintTop_toTopOf="@id/rechargeQrCodeLabel"
+                tools:text="@string/bank_account" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/downloadQrCodeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginEnd="20dp"
+                android:drawableStart="@mipmap/ic_download_qrcode"
+                android:drawableTint="@color/blue1"
+                android:foreground="?attr/selectableItemBackground"
+                android:gravity="center_vertical"
+                android:text="@string/download_recharge_qrCode"
+                android:textColor="@color/blue1"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/rechargeQrCodeLabel" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/uploadLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:text="@string/upload_transfer_money_image_text"
+                android:textColor="@color/textBlack"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rechargeQrCodeImageView" />
+
+            <ImageView
+                android:id="@+id/uploadScreenShotImageView"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/shape_rect_gray2"
+                android:foreground="?attr/selectableItemBackground"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/uploadLabel"
+                tools:text="@string/bank_account" />
+
+            <TextView
+                android:id="@+id/tips"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:paddingStart="21dp"
+                android:paddingEnd="21dp"
+                android:text="@string/recharge_tip"
+                android:textColor="@color/gray23"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/uploadScreenShotImageView" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Button
+            android:id="@+id/submitButton"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/bg_blue_click"
+            android:enabled="true"
+            android:text="@string/submit"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/contentLayout" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

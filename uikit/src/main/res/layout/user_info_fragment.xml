@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/portraitLayout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/selector_common_item"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/portraitImageView"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="@dimen/option_item_margin_right"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/avatar_def"
+            app:shapeAppearance="@style/circle" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/nameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textStyle="bold"
+                android:textColor="@color/textBlack"
+                android:textSize="15sp"
+                tools:text="用户 0001" />
+
+            <TextView
+                android:id="@+id/accountTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textColor="@color/textBlack"
+                android:textSize="14sp"
+                android:visibility="visible"
+                tools:text="帐户：" />
+
+            <TextView
+                android:id="@+id/genderTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textColor="@color/textBlack"
+                android:textSize="14sp"
+                android:visibility="visible"
+                tools:text="性别：" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/favContactTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="@dimen/option_item_margin_right"
+            android:text="☆"
+            android:textColor="#FDBE2D"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line1"
+        style="@style/Line"
+        app:layout_constraintTop_toBottomOf="@id/portraitLayout" />
+
+    <cn.wildfire.chat.kit.widget.OptionItemView
+        android:id="@+id/aliasOptionItemView"
+        style="@style/OptionItem"
+        android:background="@drawable/selector_common_item"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/line1"
+        app:show_arrow_indicator="true"
+        app:title="设置昵称或别名" />
+
+    <View
+        android:id="@+id/line2"
+        style="@style/Line"
+        app:layout_constraintTop_toBottomOf="@id/aliasOptionItemView" />
+
+    <cn.wildfire.chat.kit.widget.OptionItemView
+        android:id="@+id/messagesOptionItemView"
+        style="@style/OptionItem"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/selector_common_item"
+        app:layout_constraintTop_toBottomOf="@id/line2"
+        app:show_arrow_indicator="true"
+        app:title="查看他（她）的消息" />
+
+
+    <cn.wildfire.chat.kit.widget.OptionItemView
+        android:id="@+id/qrCodeOptionItemView"
+        style="@style/OptionItem"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/selector_common_item"
+        android:visibility="gone"
+        app:end_src="@mipmap/qr_code"
+        app:layout_constraintTop_toBottomOf="@id/messagesOptionItemView"
+        app:title="二维码" />
+
+    <LinearLayout
+        android:id="@+id/momentButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/qrCodeOptionItemView">
+
+        <View style="@style/Line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@drawable/selector_common_item"
+            android:gravity="center_vertical"
+            android:paddingLeft="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:text="朋友圈"
+                android:textColor="@color/black1"
+                android:textSize="16sp" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:src="@mipmap/ic_right" />
+
+        </LinearLayout>
+
+        <View style="@style/Line" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/chatButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/momentButton"
+        tools:visibility="visible">
+
+        <View style="@style/Line" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/selector_common_item">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/white"
+                android:drawablePadding="6dp"
+                android:drawableTint="@color/blueBtn"
+                android:text="@string/send_message"
+                android:textColor="@color/blueBtn"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+            <!--            android:drawableLeft="@mipmap/ic_start_message"-->
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line3"
+        style="@style/Line"
+        app:layout_constraintTop_toBottomOf="@id/chatButton" />
+
+    <FrameLayout
+        android:id="@+id/voipChatButton"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/selector_common_item"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/line3"
+        tools:visibility="visible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/white"
+            android:drawablePadding="6dp"
+            android:drawableTint="@color/blueBtn"
+            android:text="视频聊天"
+            android:textColor="@color/blueBtn"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+        <!--        android:drawableLeft="@mipmap/ic_start_voip"-->
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/inviteButton"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:background="@color/white"
+        android:text="@string/add_to_contact"
+        android:textColor="@color/blueBtn"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/chatButton"
+        tools:visibility="visible" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/largePortraitLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#99000000"
+        android:visibility="gone">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/largePortraitImageView"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="@dimen/option_item_margin_right"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/avatar_def"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearance="@style/circle" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,211 @@
+<resources>
+
+    <string name="complete">完成</string>
+    <string name="save">保存</string>
+    <string name="cancel">取消</string>
+    <string name="close_screen">确定离开</string>
+    <string name="submit">确认提交</string>
+    <string name="submit2">确认</string>
+    <string name="submit3">确定</string>
+    <string name="submit_order">发起订单</string>
+    <string name="next">下一步</string>
+
+    <string name="draft">[草稿]</string>
+    <string name="video">视频</string>
+    <string name="set_conversation_to_top">置顶聊天</string>
+
+    <!--新注册账号初登录首页时，提示用户前往设置个人资料-->
+    <string name="first_login_no_btn">暂时不要</string>
+    <string name="first_login_go_btn">前往设置</string>
+    <string name="first_login_title">设置个人资料</string>
+    <string name="first_login_content">设置头像与昵称让别人快速认识你</string>
+
+    <string name="password_length_4_20_text">字数须介于 4 至 20 字元</string>
+
+    <!--联系人-->
+    <string name="new_friend">新的朋友</string>
+    <string name="group_chat">群聊</string>
+
+    <!--新的朋友-->
+    <string name="add_friend">添加朋友</string>
+    <string name="no_recommend_friend">还没有推荐的朋友</string>
+    <string name="please_enter_friend_verify">请输入好友验证</string>
+    <string name="friend_verify">好友验证请求</string>
+    <string name="friend_verify_not_empty">验证不能为空</string>
+    <string name="send_friend_request">好友邀请已发送</string>
+    <string name="send_friend_request_error">添加好友失败</string>
+    <string name="please_enter">请输入</string>
+    <string name="friend_verify_text">请设置好友验证</string>
+    <string name="request_friend">对方请求添加你为朋友</string>
+    <string name="verify_success_add_friend">通过验证，已添加好友</string>
+    <string name="verify_success_reject_friend">已回绝对方添加好友</string>
+    <string name="verify_error_add_friend">好友验证失败，请输入正确好友验证码</string>
+
+    <!--搜索用户-->
+    <string name="user_no_found">该用户不存在</string>
+    <string name="search">搜索</string>
+    <string name="search_friend">搜索好友</string>
+
+    <!--用户信息-->
+    <string name="nickname_colon">昵称:%1$s</string>
+    <string name="set_alias_and_tag">设置备注和标签</string>
+    <string name="send_message">发消息</string>
+    <string name="add_to_contact">添加到通讯录</string>
+    <string name="change_my_name_tip">好名字可以让你的朋友更容易记住你。</string>
+    <string name="alias_name">昵称</string>
+    <string name="account_name">账号</string>
+    <string name="phone_name">手机号</string>
+    <string name="gender_name">性别</string>
+    <string name="update_head_icon">设置头像</string>
+    <string name="my_wallet_item_text">我的钱包</string>
+    <string name="message_notice_item_text">消息与通知</string>
+    <string name="account_security_item_text">账号与安全</string>
+    <string name="toast_name_emoji_error">不能包含表情符号</string>
+
+    <string name="account_security_msg_verify_text">短信验证码验证</string>
+    <string name="account_security_password_verify_text">密码验证</string>
+
+    <!--修改备注-->
+    <string name="alias">备注名</string>
+    <string name="alias_no_empty">备注名不能为空</string>
+
+    <!--附言界面-->
+    <string name="postscript_tip">发送好友邀请需等对方接受，才会成为好友</string>
+    <string name="verify_tip">对方需要输入您设置的好友验证，才会成为好友</string>
+    <string name="send_invite_label">发送信息</string>
+    <string name="friend_verify_label">好友验证</string>
+    <string name="skip_verify_text">免验证直接通过</string>
+    <string name="should_verify_text">需要对方验证通过</string>
+    <string name="send">发送</string>
+
+    <!--会话界面-->
+    <string name="please_to_talk">按住 说话</string>
+    <string name="shot">拍摄</string>
+    <string name="location">位置</string>
+    <string name="file">文件</string>
+
+    <string name="delete_message_content_dialog">是否删除本地消息？</string>
+
+    <string name="voice_rec">手指上滑，取消发送</string>
+    <string name="voice_cancel">松开手指，取消发送</string>
+    <string name="voice_short">录音时间太短</string>
+
+    <string name="conversation_info_title">会话详情</string>
+    <string name="conversation_group_info_title">群聊详情</string>
+
+    <!--创建群-->
+    <string name="create_group_success">创建群成功</string>
+    <string name="create_group_fail">创建群失败</string>
+    <string name="no_group_now">暂无群聊</string>
+    <string name="create_group_detail">设定群聊资讯</string>
+    <string name="member_too_less">成员过少，请增加群聊成员</string>
+
+    <string name="group_name_max_length">文字长度最多20个字</string>
+    <string name="group_announcement_max_length">文字长度最多100个字</string>
+
+    <!--群信息-->
+    <string name="group_name">群聊名称</string>
+    <string name="untitled">未命名</string>
+    <string name="group_announcement">群公告</string>
+    <string name="message_free">消息免打扰</string>
+    <string name="my_nickname_in_this_group">我在本群的昵称</string>
+    <string name="show_group_member_name">显示群成员昵称</string>
+    <string name="clear_chat_log">清空聊天记录</string>
+    <string name="clear_chat_log_content">确定清空聊天记录？</string>
+    <string name="delete_and_exit">删除并退出</string>
+    <string name="delete_and_dismiss">解散并删除</string>
+    <string name="add_member_success">添加群成员成功</string>
+    <string name="add_member_fail">添加群成员失败</string>
+    <string name="del_member_success">删除群成员成功</string>
+    <string name="del_member_fail">删除群成员失败</string>
+
+    <string name="no_permission">您没有修改权限</string>
+    <string name="can_not_privateChat">禁止群成员私聊</string>
+    <string name="group_announcement_empty">目前还没设定群公告</string>
+
+    <string name="unsubscribe">取消订阅</string>
+
+    <!--我的钱包-->
+    <string name="wallet_record_detail_text">明细</string>
+    <string name="recharge_text">充值</string>
+    <string name="withdraw_text">提现</string>
+    <string name="balance_text">钱包总额</string>
+    <string name="toast_connect_error">网路发生错误，无法连线主机</string>
+    <string name="delete_payment_title">提醒</string>
+    <string name="delete_payment_content">确定要删除银行卡？</string>
+
+    <!--钱包明细-->
+    <string name="wallet_detail_text">钱包明细</string>
+    <string name="order_id_text">订单编号</string>
+    <string name="order_status_success_text">已完成</string>
+    <string name="order_status_reject_text">已拒绝</string>
+    <string name="order_status_wait_text">待审核</string>
+    <string name="order_status_not_finish_text">订单成立</string>
+    <string name="order_status_cancel_text">用户取消</string>
+    <string name="order_status_over_time_text">订单超时</string>
+    <string name="upload_screen_shut">上传截图</string>
+
+    <!--提现-->
+    <string name="bank_list_action">银行卡</string>
+    <string name="withdraw_money">提现金额</string>
+    <string name="could_withdraw_money">可提现额度</string>
+    <string name="please_enter_withdraw_money">请输入提现金额</string>
+    <string name="select_bank">选择渠道</string>
+    <string name="select_bank_hint">选择银行</string>
+    <string name="bank_account">银行账号</string>
+    <string name="bank_name">银行名称</string>
+    <string name="bank_owner_name">收款人姓名</string>
+    <string name="withdraw_tip">提现需要人工审核，请耐心等候，可在我的钱包>明细查询提现状态</string>
+    <string name="please_enter_trade_password">请输入交易密码</string>
+    <string name="trade_password">交易密码</string>
+    <string name="trade_password_null">尚未设定交易密码</string>
+    <string name="withdraw_balance_text">总额</string>
+
+    <!--银行卡列表-->
+    <string name="bank_list_title">银行卡列表</string>
+    <string name="add_bank_title">添加银行卡</string>
+    <string name="add_bank_action">添加</string>
+    <string name="bank_enter_account">请输入银行账号</string>
+    <string name="bank_enter_bank_name">请输入银行名称</string>
+    <string name="bank_enter_owner_name">请输入收款人姓名</string>
+    <string name="submit_add_bank">添加银行卡</string>
+    <string name="trade_password_no_empty">交易密码不能为空</string>
+    <string name="bank_custom_name">银行卡名称</string>
+    <string name="please_enter_bank_custom_name">请输入自定义银行卡名称</string>
+    <string name="toast_no_wallet_data">没有钱包资料</string>
+    <string name="toast_add_bank_card_success">银行卡添加完成</string>
+    <string name="no_data">目前没有资料</string>
+    <string name="toast_withdraw_request_success">提款申请成功</string>
+    <string name="toast_withdraw_amount_error">提款金额不可超过可提款额度</string>
+    <string name="toast_withdraw_amount_error2">提款金额错误</string>
+    <string name="toast_select_bank_card_error">还没选择收款银行</string>
+
+    <!--充值-->
+    <string name="recharge_type">支付渠道</string>
+    <string name="recharge_amount">充值金额</string>
+    <string name="select_channel_recharge">选择渠道</string>
+    <string name="type_bank">银行卡</string>
+    <string name="type_weChat">微信</string>
+    <string name="type_ali">支付宝</string>
+    <string name="please_enter_recharge_money">请输入充值金额</string>
+
+    <!--上传截图-->
+    <string name="bank_owner_name2">收款人账户姓名</string>
+    <string name="pay_information_text">付款信息</string>
+    <string name="recharge_account_name">银行名称</string>
+    <string name="recharge_account_number">银行帐号</string>
+    <string name="recharge_account_qrCode">收款码</string>
+    <string name="recharge_account">账号</string>
+    <string name="upload_transfer_money_image_text">上传【转账成功】截图</string>
+    <string name="download_recharge_qrCode">下载二维码</string>
+    <string name="recharge_tip">充值需要人工审核，请耐心等候，可在我的钱包>明细查询充值状态</string>
+    <string name="upload_error">尚未选择充值截图</string>
+    <string name="upload_success">上传成功，等待审核</string>
+
+    <!--dialog-->
+    <string name="check_save_title_dialog">确定离开页面</string>
+    <string name="check_save_content_dialog">尚未保存变更资讯，是否离开页面？</string>
+
+    <!--IM Error-->
+    <string name="im_message_silence">发言太过频繁，禁止发言30秒</string>
+</resources>

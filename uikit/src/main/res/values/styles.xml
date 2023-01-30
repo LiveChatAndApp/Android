@@ -1,0 +1,139 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/gray5</item>
+        <item name="colorPrimaryDark">@color/gray5</item>
+        <!-- 设置activity切换动画 -->
+        <!--<item name="android:windowAnimationStyle">@style/activityAnimation</item>-->
+        <!-- Customize color of navigation drawer icon and back arrow -->
+        <item name="colorBackgroundFloating">@color/white</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme2" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/gray5</item>
+        <item name="colorPrimaryDark">@color/gray5</item>
+        <!-- 设置activity切换动画 -->
+        <!--<item name="android:windowAnimationStyle">@style/activityAnimation</item>-->
+        <!-- Customize color of navigation drawer icon and back arrow -->
+        <item name="colorBackgroundFloating">@color/white</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme2.LightAppbar" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/gray5</item>
+        <item name="colorPrimaryDark">@color/gray5</item>
+        <item name="actionMenuTextColor">@color/gray15</item>
+        <item name="overlapAnchor">false</item>
+        <item name="titleTextColor">@color/black2</item>
+        <item name="android:textColorPrimary">@color/black2</item>
+    </style>
+
+    <style name="AppTheme2.DarkAppbar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="actionMenuTextColor">@color/white</item>
+        <item name="overlapAnchor">false</item>
+        <item name="titleTextColor">@color/textBlack</item>
+        <item name="iconTint">@color/textBlack</item>
+        <item name="colorControlNormal">@color/textBlack</item>
+    </style>
+
+    <style name="AppTheme2.PopupOverlay" parent="ThemeOverlay.MaterialComponents.Light" />
+
+    <style name="AppTheme.LightAppbar">
+        <item name="colorPrimary">@color/gray5</item>
+        <item name="colorPrimaryDark">@color/gray5</item>
+        <item name="actionMenuTextColor">@color/blueBtn</item>
+        <item name="overlapAnchor">false</item>
+        <item name="titleTextColor">@color/textBlack</item>
+        <item name="android:textColorPrimary">@color/textBlack</item>
+    </style>
+
+    <style name="AppTheme.DarkAppbar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="actionMenuTextColor">@color/blueBtn</item>
+        <item name="overlapAnchor">false</item>
+        <item name="titleTextColor">@color/textBlack</item>
+        <item name="iconTint">@color/textBlack</item>
+        <item name="colorControlNormal">@color/textBlack</item>
+    </style>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light">
+
+    </style>
+
+    <!--全屏样式-->
+    <style name="AppTheme.FullScreen" parent="AppTheme">
+
+    </style>
+
+    <!--圆角Dialog-->
+
+    <!--自定义CheckBox样式-->
+    <style name="CustomCheckboxTheme" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/checkbox_style</item>
+    </style>
+
+    <!--实下滑线样式-->
+    <style name="Line">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.5dp</item>
+        <item name="android:background">@color/line</item>
+    </style>
+
+    <!--选项条目样式-->
+    <style name="OptionItem">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="defaultSwitch">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="topRoundedImageView_5dp" parent="">
+        <item name="cornerFamilyTopRight">rounded</item>
+        <item name="cornerSizeTopLeft">5dp</item>
+        <item name="cornerSizeTopRight">5dp</item>
+    </style>
+
+    <style name="circle" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <!--spinner-->
+    <style name="common_spinner" parent="Widget.AppCompat.Light.DropDownItem.Spinner">
+        <item name="android:background">@drawable/bg_spinner</item>
+        <!--设置 spinner 显示位置往下偏移 actionBarSize 的高度, 默认显示是直接显示在 Spinner 的选中项的上方-->
+        <item name="android:dropDownVerticalOffset">?attr/actionBarSize</item>
+        <!--设置选中之后Item 的背景变换 设置背景为 灰色背景色-->
+        <item name="android:dropDownSelector">@color/gray2</item>
+    </style>
+
+    <!--spinner-->
+    <style name="common_spinner2" parent="Widget.AppCompat.Light.DropDownItem.Spinner">
+        <item name="android:background">@drawable/bg_spinner2</item>
+        <!--设置 spinner 显示位置往下偏移 actionBarSize 的高度, 默认显示是直接显示在 Spinner 的选中项的上方-->
+        <item name="android:dropDownVerticalOffset">?attr/actionBarSize</item>
+        <!--设置选中之后Item 的背景变换 设置背景为 灰色背景色-->
+        <item name="android:dropDownSelector">@color/backgroundGray</item>
+        <item name="android:textColor">@color/blueBtn</item>
+        <item name="android:dropDownListViewStyle">@style/TestSpinnerStyle</item>
+    </style>
+
+    <!--DropDown ListView-->
+    <style name="TestSpinnerStyle" parent="Widget.AppCompat.ListView.DropDown">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/textBlack</item>
+        <item name="android:divider">@color/gray25</item>
+        <item name="android:dividerHeight">1dp</item>
+    </style>
+
+</resources>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundGray"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/iconRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/selector_common_item"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/portraitImageView"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/avatar_def"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearance="@style/circle" />
+
+        <ImageView
+            android:id="@+id/arrowImageView"
+            android:layout_width="19dp"
+            android:layout_height="17dp"
+            android:src="@mipmap/ic_camera"
+            app:layout_constraintBottom_toBottomOf="@id/portraitImageView"
+            app:layout_constraintEnd_toEndOf="@id/portraitImageView" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <cn.wildfire.chat.kit.widget.OptionItemView
+        android:id="@+id/aliasOptionItemView"
+        style="@style/OptionItem"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/selector_common_item"
+        app:desc_color="@color/gray23"
+        app:show_arrow_indicator="true"
+        app:title="@string/alias_name"
+        tools:desc="用户001" />
+
+    <cn.wildfire.chat.kit.widget.OptionItemView
+        android:id="@+id/accountOptionItemView"
+        style="@style/OptionItem"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/selector_common_item"
+        app:desc_color="@color/gray25"
+        app:show_arrow_indicator="false"
+        app:title="@string/account_name"
+        tools:desc="ron01" />
+
+    <cn.wildfire.chat.kit.widget.OptionItemView
+        android:id="@+id/phoneOptionItemView"
+        style="@style/OptionItem"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/selector_common_item"
+        app:desc_color="@color/gray25"
+        app:show_arrow_indicator="false"
+        app:title="@string/phone_name"
+        tools:desc="18411046608" />
+
+    <cn.wildfire.chat.kit.widget.OptionItemView
+        android:id="@+id/genderOptionItemView"
+        style="@style/OptionItem"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/selector_common_item"
+        app:desc_color="@color/gray23"
+        app:show_arrow_indicator="true"
+        app:title="@string/gender_name"
+        tools:desc="保留" />
+
+    <cn.wildfire.chat.kit.widget.OptionItemView
+        android:id="@+id/qrCodeOptionItemView"
+        style="@style/OptionItem"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/selector_common_item"
+        android:visibility="gone"
+        app:end_src="@mipmap/qr_code"
+        app:title="二维码" />
+
+</LinearLayout>

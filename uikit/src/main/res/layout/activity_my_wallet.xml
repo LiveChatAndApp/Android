@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundGray"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+    <View
+        android:id="@+id/backgroundItem"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/shape_rect_gray"
+        app:layout_constraintBottom_toBottomOf="@id/bottomDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appbar" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/balanceLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/balance_text"
+        android:textColor="@color/textBlack"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@id/backgroundItem"
+        app:layout_constraintTop_toTopOf="@id/backgroundItem" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/balanceTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:textColor="@color/blueBtn"
+        android:textSize="38sp"
+        app:layout_constraintStart_toStartOf="@id/balanceLabel"
+        app:layout_constraintTop_toBottomOf="@id/balanceLabel"
+        tools:text="500.00" />
+
+    <Button
+        android:id="@+id/rechargeButton"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/bg_blue_click"
+        android:text="@string/recharge_text"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@id/backgroundItem"
+        app:layout_constraintStart_toEndOf="@id/withdrawButton"
+        app:layout_constraintTop_toTopOf="@id/withdrawButton" />
+
+    <Button
+        android:id="@+id/withdrawButton"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/bg_white_click"
+        android:text="@string/withdraw_text"
+        android:textColor="@color/blueBtn"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@id/rechargeButton"
+        app:layout_constraintStart_toStartOf="@id/balanceLabel"
+        app:layout_constraintTop_toBottomOf="@id/balanceTextView" />
+
+    <androidx.legacy.widget.Space
+        android:id="@+id/bottomDivider"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toStartOf="@id/rechargeButton"
+        app:layout_constraintStart_toStartOf="@id/balanceLabel"
+        app:layout_constraintTop_toBottomOf="@id/withdrawButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
