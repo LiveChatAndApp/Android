@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <!--
+    使用LightAppBar 主题时，layout_height="110dp"，paddingTop="0dp" 更协调
+    -->
+    <LinearLayout
+        android:id="@+id/meLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="@dimen/option_item_margin_top"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/selector_common_item2"
+        android:gravity="center_vertical"
+        android:paddingRight="3dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/portraitBg"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="@dimen/option_item_margin_right"
+                android:background="@color/white"
+                app:shapeAppearance="@style/circle" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/portraitImageView"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="@dimen/option_item_margin_right"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/avatar_def"
+                app:shapeAppearance="@style/circle" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/nameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
+                android:singleLine="true"
+                android:textColor="@color/gray0"
+                android:textSize="18sp"
+                android:visibility="gone"
+                tools:text="用户 0001" />
+
+            <TextView
+                android:id="@+id/accountTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:singleLine="true"
+                android:text="@string/my_chat_account"
+                android:textColor="@color/textBlack"
+                android:textSize="13sp"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/genderTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:singleLine="true"
+                android:text="@string/my_gender"
+                android:textColor="@color/textBlack"
+                android:textSize="13sp"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:src="@mipmap/ic_modify_me"
+            app:tint="@color/textBlack" />
+
+    </LinearLayout>
+
+    <!--我的钱包-->
+    <cn.wildfire.chat.kit.widget.OptionItemView
+        android:id="@+id/myWalletOptionItemView"
+        style="@style/OptionItem"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="@dimen/option_item_margin_top"
+        android:layout_marginEnd="15dp"
+        app:background_src="@drawable/selector_common_item2"
+        app:desc="@string/my_balance"
+        app:desc_color="@color/textBlack"
+        app:desc_size="12sp"
+        app:divider_visible="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/meLinearLayout"
+        app:show_arrow_indicator="true"
+        app:title="@string/my_wallet_item_text" />
+
+    <cn.wildfire.chat.kit.widget.OptionItemView
+        android:id="@+id/notificationOptionItemView"
+        style="@style/OptionItem"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="@dimen/option_item_margin_top"
+        android:layout_marginEnd="15dp"
+        app:background_src="@drawable/selector_common_item2"
+        app:divider_visible="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/myWalletOptionItemView"
+        app:show_arrow_indicator="true"
+        app:title="@string/message_notice_item_text" />
+
+    <cn.wildfire.chat.kit.widget.OptionItemView
+        android:id="@+id/accountOptionItemView"
+        style="@style/OptionItem"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="@dimen/option_item_margin_top"
+        android:layout_marginEnd="15dp"
+        app:background_src="@drawable/selector_common_item2"
+        app:divider_align_to_title="true"
+        app:divider_visible="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/notificationOptionItemView"
+        app:show_arrow_indicator="true"
+        app:title="@string/account_security_item_text" />
+
+    <cn.wildfire.chat.kit.widget.OptionItemView
+        android:id="@+id/fileRecordOptionItemView"
+        style="@style/OptionItem"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="@dimen/option_item_margin_top"
+        android:layout_marginEnd="15dp"
+        android:visibility="gone"
+        app:background_src="@drawable/selector_common_item2"
+        app:divider_align_to_title="true"
+        app:divider_visible="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/accountOptionItemView"
+        app:show_arrow_indicator="true"
+        app:start_src="@mipmap/ic_settings_file"
+        app:title="文件" />
+
+    <cn.wildfire.chat.kit.widget.OptionItemView
+        android:id="@+id/favOptionItemView"
+        style="@style/OptionItem"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="@dimen/option_item_margin_top"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/selector_common_item"
+        app:background_src="@drawable/selector_common_item2"
+        app:divider_align_to_title="true"
+        app:divider_visible="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fileRecordOptionItemView"
+        app:show_arrow_indicator="true"
+        app:title="收藏" />
+
+    <cn.wildfire.chat.kit.widget.OptionItemView
+        android:id="@+id/themeOptionItemView"
+        style="@style/OptionItem"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="@dimen/option_item_margin_top"
+        android:layout_marginEnd="15dp"
+        android:visibility="gone"
+        app:background_src="@drawable/selector_common_item2"
+        app:divider_align_to_title="true"
+        app:divider_visible="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/favOptionItemView"
+        app:show_arrow_indicator="true"
+        app:start_src="@mipmap/ic_theme"
+        app:title="主题" />
+
+    <cn.wildfire.chat.kit.widget.OptionItemView
+        android:id="@+id/settintOptionItemView"
+        style="@style/OptionItem"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="@dimen/option_item_margin_top"
+        android:layout_marginEnd="15dp"
+        android:clickable="true"
+        app:background_src="@drawable/selector_common_item2"
+        app:divider_visible="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/themeOptionItemView"
+        app:show_arrow_indicator="true"
+        app:title="@string/setting" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/largePortraitLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#99000000"
+        android:visibility="gone">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/largePortraitImageView"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="@dimen/option_item_margin_right"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/avatar_def"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearance="@style/circle" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
